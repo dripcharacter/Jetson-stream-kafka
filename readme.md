@@ -13,4 +13,8 @@ https://github.com/Qengineering/Install-OpenCV-Jetson-Nano/tree/main</br>
 ## 3. FFmpeg
 Third, in my case, I had to use hardware accelerated encoding. So, I installed old version with this guide.</br>
 https://github.com/jocover/jetson-ffmpeg</br>
-You have to use compiled binary to use hardware accelerated encoding/decoding
+You have to use compiled binary to use hardware accelerated encoding/decoding</br>
+If you stuck in `cmake ..` command with `LIB_NVBUF` related error, that's because JetPack OS has different Multimedia API after 5.1.2.</br>
+In that case, you can use this one.</br>
+https://github.com/Keylost/jetson-ffmpeg</br>
+And there can be Segmentation Fault when you use `h264_nvmpi` for encode camera capturing
